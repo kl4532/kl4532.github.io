@@ -1,14 +1,111 @@
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+body{
+  background: #234b7b;
+  color: white;
+}
+h2{
+  padding-top: 5rem;
+  text-align: center;
+}
+.line{
+  width: 30%;
+  margin: auto;
+}
+.my-color{
+  background: #4e6e95;
+}
+.navbar{
+  height: 3.5rem;
+}
+.nav-link{
+  text-decoration: none;
+  color: #D3D3D3;
+}
+.nav-link:hover{
+  text-decoration: none;
+  color: white;
+}
+.nav-item{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.nav-item:hover{
+  border-bottom: solid 0.5rem white;
+  margin-bottom: -0.5rem;
+  padding-bottom: -0.5rem;
+  color: white;
+}
+/*Sections  */
+.home {
+  height: 100vh;
+  background: red;
+}
+.projects {
+  height: 100vh;
+  background: gray;
+}
+.about {
+  height: 100vh;
+  background: green;
+}
+.contact {
+  height: 100vh;
+  background: blue;
+}
+.container{
+  display: flex;
+}
+.item{
+  min-width: 300px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 300px;
+  height: 200px;
+  background: pink;
+}
+.item:hover{
+  background: white;
+}
+.fcc-fr{
+  width: 300px;
+  height: 100px;
+  margin 0;
+  text-align: center;
+  background: yellow;
+}
+.fcc-bck{
+  width: 300px;
+  height: 100px;
+  margin 0;
+  text-align: center;
+  background: red;
+}
+.fcc-fr:hover{
+  background: white;
+}
+.fcc-bck:hover{
+  background: white;
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+@media only screen and (max-width: 950px) {
+    .container{
+      display: flex;
+      flex-flow: column;
+      margin: auto;
+      align-items: center;
+    }
+    .item{
+      align-items: center;
+      margin-bottom: 20px;
+      background: green;
+    }
+    .projects {
+      height: 150vh;
+      background: gray;
+    }
+    .fcc-fr{
+      margin: 0;
+    }
+    .fcc-bck{
+      margin: 0;
+    }
 }
