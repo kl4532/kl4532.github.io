@@ -107,8 +107,8 @@ img:hover{
       background: green;
     }
     .projects {
-      height: 150vh;
-      background: gray;
+      height: 1000px;
+      background: purple;
     }
     .fcc-fr{
       margin: 0;
