@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="blackjack.css">
+</head>
+<body>
+	<div class="frame">
+		<div class="playground">
+			<div id="dealerValue" class="dealerValue">Dealer: 0</div>
+			<div id="dealerCards" class="dealerCards">
+			</div>
+			<div id="playerValue" class="playerValue">Player: 0</div>
+			<div id="playerCards" class="playerCards">
+			</div>
+
+		</div>
+		<div class="options">
+			<!--Choose number of decks:
+	    <button class = "btn_decs1" onclick="start(1)">1</button>
+	    <button class = "btn_decs2" onclick="start(2)">2</button>
+	    <button class = "btn_decs4" onclick="start(4)">4</button>
+	    <button class = "btn_decs6" onclick="start(6)">6</button>
+	    <button class = "btn_decs8" onclick="start(8)">8</button>
+		</div> -->
+	<div class="bank">Bank: <span id="balance"></span></div>
+	<button id="btn_bet" class = "btn btn_bet" onclick="initialDeal()">Bet</button>
+	<input id="bet" type="number" class = "bet" min="5"  value="10"></input><br>
+  <button disabled id="btn_hit" class = "btn btn_hit" onclick="addCard('playerCards');">Hit</button>
+	<button disabled id="btn_stand" class = "btn btn_stand" onclick="stand()">Stand</button>
+	<!-- <button disabled id="btn_double" class = "btn_double" onclick="double()">Double</button>
+	-->
+  <div>
+
+  </div>
+  <button class = "btn_check" onclick="check_value()">Hint</button>
+
+
+  </div>
+
+</div>
+<script src="blackjack.js"></script>
+</body>
+
+</html>
