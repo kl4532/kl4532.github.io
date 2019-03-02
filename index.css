@@ -1,6 +1,7 @@
 body{
   background: #234b7b;
   color: white;
+  text-align: center;
 }
 h2{
   padding-top: 5rem;
@@ -45,19 +46,19 @@ img:hover{
 /*Sections  */
 .home {
   height: 100vh;
-  background: red;
+  /* background: red; */
 }
 .projects {
   height: 100vh;
-  background: olive;
+  /* background: olive; */
 }
 .about {
   height: 100vh;
-  background: green;
+  /* background: green; */
 }
 .contact {
-  height: 100vh;
-  background: green;
+  height: 90vh;
+  /* background: green; */
 }
 .container{
   display: flex;
@@ -107,7 +108,7 @@ img:hover{
       background: green;
     }
     .projects {
-      height: 1000px;
+      height: 1200px;
       background: purple;
     }
     .fcc-fr{
@@ -143,12 +144,25 @@ img:hover{
  #social-fb:hover {
      color: #3B5998;
  }
- #social-tw:hover {
-     color: #4099FF;
+ #social-gh:hover {
+     color: #333;
  }
  #social-gp:hover {
-     color: #d34836;
+     color: green;
  }
  #social-em:hover {
      color: #f39c12;
+ }
+ .contact-form{
+   margin-left: 200px;
+   margin-right: 200px;
+ }
+ .about{
+   margin-left: 300px;
+   margin-right: 300px;
+   text-align: justify;
+ }
+ .footer{
+   background: #4e6e95;
+   text-align: center;
  }
