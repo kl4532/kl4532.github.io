@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="referrer" content="origin">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Korneliusz Łukasiak</title>
   </head>
   <body>
@@ -52,6 +56,43 @@
     <div class="contact" id="contact">
       <h2>Contact</h2>
       <div class="border-top my-5 line"></div>
+
+       <!-- <input type="text" name="name">
+       <input type="email" name="_replyto">
+       <input type="submit" value="Send">
+      </form> -->
+      <form action="https://formspree.io/kornellukasiak@gmail.com" method="POST">
+        <div class="form-group">
+          <label for="email">Your email address</label>
+          <input name="_replyto" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Name</label>
+          <input type="text" class="form-control" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Message</label>
+          <textarea name="message" type="text" class="form-control"  placeholder="Name"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+    <div class="container">
+      <h3>Multi-Coloured</h3>
+      <hr>
+          <div class="text-center center-block">
+            <p class="txt-railway">- Bootsnipp.com -</p>
+            <br />
+                <a href="https://www.facebook.com/bootsnipp"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+	            <a href="https://twitter.com/bootsnipp"><i id="social-tw" class="fa fa-github-square fa-3x social"></i></a>
+	            <a href="https://plus.google.com/+Bootsnipp-page"><i id="social-gp" class="fa fa-free-code-camp fa-3x social"></i></a>
+	            <a href="mailto:bootsnipp@gmail.com"><i id="social-em" class="fa fa-envelope-square fa-3x social"></i></a>
+          </div>
+      <hr>
+    </div>
+
+
     </div>
     <footer style="text-align: center;">Created by Corny</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
