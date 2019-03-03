@@ -2,6 +2,7 @@ body{
   background: #234b7b;
   color: white;
   text-align: center;
+  position: relative;
 }
 h2{
   padding-top: 5rem;
@@ -37,11 +38,23 @@ img:hover{
   margin-left: 1rem;
   margin-right: 1rem;
 }
+.active{
+  border-bottom: solid 0.5rem white;
+  margin-bottom: -0.5rem;
+  padding-bottom: -0.5rem;
+  color: white;
+}
 .nav-item:hover{
   border-bottom: solid 0.5rem white;
   margin-bottom: -0.5rem;
   padding-bottom: -0.5rem;
   color: white;
+}
+.sectionClass:hover h2 {
+  display: block;
+}
+.sectionClass h2 {
+  display: none;
 }
 /*Sections  */
 .home {
@@ -57,7 +70,7 @@ img:hover{
   /* background: green; */
 }
 .contact {
-  height: 90vh;
+  height: 95vh;
   /* background: green; */
 }
 .container{
@@ -142,15 +155,15 @@ img:hover{
 */
 
  #social-fb:hover {
-     color: #3B5998;
+     color: #3b5998;
  }
  #social-gh:hover {
      color: #333;
  }
- #social-gp:hover {
+ #social-fcc:hover {
      color: green;
  }
- #social-em:hover {
+ #social-li:hover {
      color: #f39c12;
  }
  .contact-form{
