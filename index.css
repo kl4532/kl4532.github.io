@@ -44,18 +44,6 @@ img:hover{
   padding-bottom: -0.5rem;
   color: white;
 }
-.nav-item:hover{
-  border-bottom: solid 0.5rem white;
-  margin-bottom: -0.5rem;
-  padding-bottom: -0.5rem;
-  color: white;
-}
-.sectionClass:hover h2 {
-  display: block;
-}
-.sectionClass h2 {
-  display: none;
-}
 /*Sections  */
 .home {
   height: 100vh;
