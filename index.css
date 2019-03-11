@@ -60,18 +60,18 @@ p{
 }
 /*Sections  */
 .home {
-  height: 100vh;
+  height: auto;
   padding-top: 4rem;
   min-width: 500px;
   margin: 0 auto;
   /* background: red; */
 }
 .projects {
-  height: 100vh;
+  height: auto;
   /* background: olive; */
 }
 .about {
-  height: 100vh;
+  height: auto;
   text-align: justify;
   /* background: green; */
 }
