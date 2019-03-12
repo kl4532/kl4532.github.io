@@ -78,11 +78,13 @@ p{
 .contact {
   height: auto;
   padding-bottom: 30px;
+  width: 500px;
+  margin: 0 auto;
   /* background: green; */
 }
 .contact-form{
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .container{
   display: flex;
@@ -162,24 +164,37 @@ p{
 
 /* MEDIA QUERIES */
  @media only screen and (max-width: 950px) {
-     .container{
-       display: flex;
-       flex-flow: column;
-       margin: auto;
-       align-items: center;
-     }
-     .item{
-       align-items: center;
-       margin-bottom: 20px;
-       background: green;
-     }
-     .projects {
-       height: 1200px;
-     }
-     .fcc-fr{
-       margin: 0;
-     }
-     .fcc-bck{
-       margin: 0;
-     }
+   h1{
+     font-size: 70px;
+   }
+
+   .container{
+     display: flex;
+     flex-flow: column;
+     margin: auto;
+     align-items: center;
+   }
+   .item{
+     align-items: center;
+     margin-bottom: 20px;
+   }
+   .projects {
+     height: 1200px;
+   }
+   .fcc-fr{
+     margin: 0;
+   }
+   .fcc-bck{
+     margin: 0;
+   }
+ }
+ .to-top{
+   background: white;
+   height: 50px;
+   width: 50px;
+   font-size: 20px;
+   border: white;
+   border-radius: 50%;
+   user-select: none;
+   color: black;
  }

@@ -3,6 +3,7 @@ var par,k, result=0;
 var colors = ["green", "red", "blue", "yellow"];
 var los, n=1, check=1, cp=0; // n=1
 var con = true;
+var length = 10;
 // git v5
 function mouseDown(id) {
 var audio = document.getElementById("a"+id);
@@ -88,7 +89,7 @@ function get_way()
 {
 
 	los = Math.floor((Math.random() * 4) + 0);
-		for(var i=0;i<20;i++)
+		for(var i=0;i<length;i++)
 			{
 				los = Math.floor((Math.random() * 4) + 0);
 				arr.push(colors[los]);
@@ -100,8 +101,8 @@ function help(){
 function show_way()
 {
 	//document.getElementById('help').innerHTML = arr;
-	var inc=n*20;
-	k =700-inc;
+	var inc=n*length;
+	var k =700-inc;
 	mouseDown(arr[0]);
 
 	setTimeout(function(){mouseUp(arr[0]); }, k);
@@ -132,7 +133,7 @@ function checker()
 		cp++;
 		if(cp==n)
 		{
-			if(n==20) 									// Game goal
+			if(n==10) 									// Game goal
 			{
 				reset('win')
 			}else reset('good');
@@ -180,7 +181,7 @@ function reset(p)
 		p_arr =[];
 		n=1;
 		document.getElementById("count").innerHTML = "Score: " + n;
-		alert("YOU WIN! Press generate to play again.");
+		alert("YOU WON!");
 		arr=[];
 		document.getElementById("count").innerHTML = "Score: 0";
 		get_way();

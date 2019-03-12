@@ -1,6 +1,9 @@
-h2{
-  color: white;
-}
+
 body{
   background: #33510f;
+  text-align: center;
+  color: white;
+}
+a{
+  color: yellow;
 }
