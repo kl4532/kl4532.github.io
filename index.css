@@ -18,7 +18,6 @@ p{
   margin-right:auto;
   text-align:justify;
   max-width: 450px;
-  min-width: 300px;
 }
 .my-img{
   width: 200px;
@@ -28,9 +27,18 @@ p{
   max-width:100%;
   max-height:100%;
   border-radius: 20px;
+  -webkit-transform: scale(0.9);
+  /* Browser Variations: */
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7;
+  -o-transition-duration: 0.7s;
 }
 .prj-img:hover{
-  opacity: 0.5;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .line{
   width: 30%;
@@ -83,13 +91,13 @@ p{
   /* background: green; */
 }
 .contact-form{
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 .container{
   display: flex;
 }
-
 .footer{
    background: #4e6e95;
    text-align: center;
@@ -99,7 +107,6 @@ p{
    font-size:10px
 }
 .item{
-  min-width: 300px;
   margin-left: 5px;
   margin-right: 5px;
   width: 300px;
