@@ -1,9 +1,10 @@
 body{
   background: #234b7b;
   color: white;
-  min-width: 450px;
+  min-width: 350px;
   margin:0 auto;
   text-align:center;
+    /* overflow-x: hidden !important; */
 }
 h1{
   font-size: 100px;
@@ -62,7 +63,6 @@ p{
 .home {
   height: auto;
   padding-top: 4rem;
-  min-width: 450px;
   margin: 0 auto;
   /* background: red; */
 }
@@ -78,7 +78,6 @@ p{
 .contact {
   height: auto;
   padding-bottom: 30px;
-  min-width: 450px;
   max-width: 800px;
   margin: 0 auto;
   /* background: green; */
@@ -174,9 +173,21 @@ p{
      margin: auto;
      align-items: center;
    }
+   .contact{
+     min-width: 350px;
+     max-width: 450px;
+   }
    .item{
      align-items: center;
      margin-bottom: 20px;
+   }
+   .navbar{
+     height: 3.5rem;
+     text-align: center;
+   }
+   .nav-item{
+     margin-left: 3px;
+     margin-right: 3px;
    }
    .projects {
      height: 1200px;
