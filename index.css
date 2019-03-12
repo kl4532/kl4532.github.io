@@ -1,7 +1,7 @@
 body{
   background: #234b7b;
   color: white;
-  min-width: 350px;
+  min-width: 300px;
   margin:0 auto;
   text-align:center;
     /* overflow-x: hidden !important; */
@@ -17,7 +17,8 @@ p{
   margin-left:auto;
   margin-right:auto;
   text-align:justify;
-  width: 350px
+  max-width: 450px;
+  min-width: 300px;
 }
 .my-img{
   width: 200px;
@@ -78,7 +79,6 @@ p{
 .contact {
   height: auto;
   padding-bottom: 30px;
-  max-width: 800px;
   margin: 0 auto;
   /* background: green; */
 }
@@ -165,7 +165,7 @@ p{
 /* MEDIA QUERIES */
  @media only screen and (max-width: 950px) {
    h1{
-     font-size: 70px;
+     font-size: 50px;
    }
    .container{
      display: flex;
@@ -174,7 +174,7 @@ p{
      align-items: center;
    }
    .contact{
-     min-width: 350px;
+
      max-width: 450px;
    }
    .item{
@@ -186,8 +186,8 @@ p{
      text-align: center;
    }
    .nav-item{
-     margin-left: 3px;
-     margin-right: 3px;
+     margin-left: 1px;
+     margin-right: 1px;
    }
    .projects {
      height: 1200px;
