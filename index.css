@@ -1,7 +1,7 @@
 body{
   background: #234b7b;
   color: white;
-  min-width: 600px;
+  min-width: 450px;
   margin:0 auto;
   text-align:center;
 }
@@ -16,7 +16,7 @@ p{
   margin-left:auto;
   margin-right:auto;
   text-align:justify;
-  width: 300px
+  width: 350px
 }
 .my-img{
   width: 200px;
@@ -62,7 +62,7 @@ p{
 .home {
   height: auto;
   padding-top: 4rem;
-  min-width: 500px;
+  min-width: 450px;
   margin: 0 auto;
   /* background: red; */
 }
@@ -78,7 +78,8 @@ p{
 .contact {
   height: auto;
   padding-bottom: 30px;
-  width: 500px;
+  min-width: 450px;
+  max-width: 800px;
   margin: 0 auto;
   /* background: green; */
 }
