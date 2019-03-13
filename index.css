@@ -19,6 +19,12 @@ p{
   text-align:justify;
   max-width: 450px;
 }
+.flag{
+  width: 30px;
+  position: absolute;
+  margin-top: -10px;
+  margin-right: 10px;
+}
 .my-img{
   width: 200px;
 }
