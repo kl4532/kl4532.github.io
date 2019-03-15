@@ -55,10 +55,12 @@ p{
 }
 .navbar{
   height: 3.5rem;
+
 }
 .nav-link{
   text-decoration: none;
   color: #D3D3D3;
+  white-space: nowrap;
 }
 .nav-link:hover{
   text-decoration: none;
@@ -176,7 +178,7 @@ p{
 
 
 /* MEDIA QUERIES */
- @media only screen and (max-width: 950px) {
+ @media only screen and (max-width: 950px){
    h1{
      font-size: 50px;
    }
@@ -187,7 +189,44 @@ p{
      align-items: center;
    }
    .contact{
-
+     max-width: 450px;
+   }
+   .item{
+     align-items: center;
+     margin-bottom: 20px;
+   }
+   .navbar{
+     height: 3.5rem;
+     text-align: center;
+   }
+   .nav-item{
+     margin-left: 1px;
+     margin-right: 1px;
+   }
+   .projects {
+     height: 1200px;
+   }
+   .fcc-fr{
+     margin: 0;
+   }
+   .fcc-bck{
+     margin: 0;
+   }
+ }
+ @media only screen and (max-width: 450px){
+   h1{
+     font-size: 50px;
+   }
+   .nav-link{
+     font-size: 15px;
+   }
+   .container{
+     display: flex;
+     flex-flow: column;
+     margin: auto;
+     align-items: center;
+   }
+   .contact{
      max-width: 450px;
    }
    .item{
