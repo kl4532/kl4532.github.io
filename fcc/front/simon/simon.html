@@ -4,10 +4,10 @@
 	<link rel="stylesheet" href="simon.css" type="text/css"></head>
 	<body>
 	<div class="quarter-cir">
-       <div  onmousedown="mouseDownUser('green')" onmousedown="mouseDown('green')" onmouseup="mouseUp('green')" onclick="checker()" id="green" class="cir green"></div>
-       <div  onmousedown="mouseDownUser('blue')" onmousedown="mouseDown('blue')" onmouseup="mouseUp('blue')"onclick="checker()" id="blue" class="cir blue"></div>
-       <div  onmousedown="mouseDownUser('yellow')" onmousedown="mouseDown('yellow')" onmouseup="mouseUp('yellow')" onclick="checker()" id="yellow" class="cir yellow"></div>
-       <div  onmousedown="mouseDownUser('red')"onmousedown="mouseDown('red')" onmouseup="mouseUp('red')" onclick="checker(n)" id="red" class="cir red"></div>
+       <div  onmousedown="mouseDown('green', true)" onmousedown="mouseDown('green')" onmouseup="mouseUp('green')" onclick="gameStatus(n)" id="green" class="cir green"></div>
+       <div  onmousedown="mouseDown('blue', true)" onmousedown="mouseDown('blue')" onmouseup="mouseUp('blue')"onclick="gameStatus(n)" id="blue" class="cir blue"></div>
+       <div  onmousedown="mouseDown('yellow', true)" onmousedown="mouseDown('yellow')" onmouseup="mouseUp('yellow')" onclick="gameStatus(n)" id="yellow" class="cir yellow"></div>
+       <div  onmousedown="mouseDown('red', true)"onmousedown="mouseDown('red')" onmouseup="mouseUp('red')" onclick="gameStatus(n)" id="red" class="cir red"></div>
   </div>
 	<div class="inside">SIMON
 		<div id="count" type="text" name="count">Score: 0</div>

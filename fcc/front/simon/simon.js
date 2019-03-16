@@ -1,148 +1,85 @@
-var arr = [], p_arr = [];
+var arr = [], p_arr = []; // arr -array with correct way;  p_arr - player way array
 var par,k, result=0;
 var colors = ["green", "red", "blue", "yellow"];
 var los, n=1, check=1, cp=0; // n=1
 var con = true;
 var length = 10;
-// git v5
-function mouseDown(id) {
-var audio = document.getElementById("a"+id);
-	switch(id)
-	{
-		case "green":
-		audio.play("agreen");
-		document.getElementById(id).style.background = "#329932";
-		break;
 
-		case "red":
-		audio.play("ared");
-		document.getElementById(id).style.background = "#ff3232";
-		break;
-
-		case "blue":
-		audio.play("ablue");
-		document.getElementById(id).style.background = "#4cc0ff";
-		break;
-
-		case "yellow":
-		audio.play("ayellow");
-		document.getElementById(id).style.background = "#ffff4c";
-		break;
-	}
-}
-function mouseDownUser(id) {
-var audio = document.getElementById("a"+id);
-	switch(id)
-	{
-		case "green":
-		audio.play("agreen");
-		document.getElementById(id).style.background = "#329932";
-		p_arr.push(id);
-		break;
-
-		case "red":
-		audio.play("ared");
-		document.getElementById(id).style.background = "#ff3232";
-		p_arr.push(id);
-		break;
-
-		case "blue":
-		audio.play("ablue");
-		document.getElementById(id).style.background = "#4cc0ff";
-		p_arr.push(id);
-		break;
-
-		case "yellow":
-		audio.play("ayellow");
-		document.getElementById(id).style.background = "#ffff4c";
-		p_arr.push(id);
-		break;
-	}
-}
-
-function mouseUp(id){
-var audio = document.getElementById("a"+id);
-	switch(id)
-	{
-		case "green":
-		audio.pause("agreen");
-		document.getElementById(id).style.background = "green";
-		break;
-
-		case "red":
-		audio.pause("ared");
-		document.getElementById(id).style.background = "red";
-		break;
-
-		case "blue":
-		audio.pause("ablue");
-		document.getElementById(id).style.background = "#00A6FF";
-		break;
-
-		case "yellow":
-		audio.pause("ayellow");
-		document.getElementById(id).style.background = "yellow";
-		break;
-	}
-}
-function get_way()
-{
-
-	los = Math.floor((Math.random() * 4) + 0);
-		for(var i=0;i<length;i++)
-			{
+function get_way(){ // draw n-sounds to repeat, n= length
+	// los = Math.floor((Math.random() * 4) + 0);
+		for(var i=0; i<length ;i++){
 				los = Math.floor((Math.random() * 4) + 0);
 				arr.push(colors[los]);
 			}
 }
-function help(){
-	document.getElementById('help').innerHTML = arr;
-};
-function show_way()
-{
-	//document.getElementById('help').innerHTML = arr;
+
+function show_way(){
 	var inc=n*length;
-	var k =700-inc;
+	var dur =700-inc; // sound duration
 	mouseDown(arr[0]);
 
-	setTimeout(function(){mouseUp(arr[0]); }, k);
-
-	function doSetTimeoutDown(i)
+	setTimeout(function(){mouseUp(arr[0]); }, dur); // display first sound
+	{//  FOR JS older than 2017
+	// function doSetTimeoutDown(i)
+	// {
+	//   setTimeout(function(){ mouseDown(arr[i]); }, dur);
+	// }
+	// function doSetTimeoutUp(i)
+	// {
+	//   setTimeout(function(){ mouseUp(arr[i]); }, dur);
+	// }
+	// for(let i=1;i<n;i++)
+	// {
+	// 	dur+=700-inc;
+	// 	 doSetTimeoutDown(i);
+	// 	dur+=700-inc;
+	// 	 doSetTimeoutUp(i);
+	// }
+}
+	for(let i=1;i<n;i++) // let instead of var allow to use setTimeout in for loop
 	{
-	  setTimeout(function(){ mouseDown(arr[i]); }, k);
-	}
-	function doSetTimeoutUp(i)
-	{
-	  setTimeout(function(){ mouseUp(arr[i]); }, k);
-	}
-	for(var i=1;i<n;i++)
-	{
-		k+=700-inc;
-		doSetTimeoutDown(i);
-		k+=700-inc;
-		doSetTimeoutUp(i);
-
+		dur+=700-inc;
+		setTimeout(function(){ mouseDown(arr[i]); }, dur);
+		dur+=700-inc;
+		setTimeout(function(){ mouseUp(arr[i]); }, dur);
 	}
 }
 
-function checker()
-{
-	if(p_arr[cp]==arr[cp])
-	{
-		con =true;
+function mouseDown(id, user) {
+var audio = document.getElementById("a"+id);
+	document.getElementById(id).style.background = id;
+	document.getElementById(id).style.opacity = 0.4;
+	audio.play("a"+id);
+	if(user){p_arr.push(id)};
+}
+
+function mouseUp(id){
+	var audio = document.getElementById("a"+id);
+	document.getElementById(id).style.background = id;
+	document.getElementById(id).style.opacity = 1;
+	audio.pause("a"+id);
+}
+
+function help(){ // display all moves to user in txt
+	document.getElementById('help').innerHTML = arr;
+};
+
+function gameStatus(n){
+	if(p_arr[cp]==arr[cp]){ // check if user current sound is the same as in the example array
+		con = true;
 		cp++;
-		if(cp==n)
+		if(cp==n) // check if user repeated all sounds
 		{
-			if(n==10) 									// Game goal
+			if(n==length) // check if the game is finished
 			{
 				reset('win')
 			}else reset('good');
 		}
 	}else reset('wrong');
 }
-function reset(p)
+function reset(option)
 {
-	switch(p)
+	switch(option)
 	{
 		case 'wrong':
 		if(document.getElementById("strict").checked == true) 	//strict
@@ -150,12 +87,9 @@ function reset(p)
 			cp=0;
 			n=1;
 			p_arr =[];
-			//alert("wrong");
-			var audio = document.getElementById("awrong");
-			audio.play("awrong");
-			setTimeout(function(){audio.pause("awrong"); 500});
+			alert("wrong")
 			document.getElementById("count").innerHTML = "Score: 0";
-			show_way();
+			setTimeout(function(){show_way();}, 500);
 		}else
 		{
 			cp=0;
@@ -188,39 +122,3 @@ function reset(p)
 		break;
 	}
 }
-// addEventListener("keydown", function(event) {
-//     if (event.keyCode == 81) //q
-//       mouseDownUser("green");
-// 			checker();
-//   });
-//   addEventListener("keyup", function(event) {
-//     if (event.keyCode == 81)
-//       mouseUp("green");
-//   });
-// 	addEventListener("keydown", function(event) {
-// 	    if (event.keyCode == 87) //w
-// 	      mouseDownUser("red");
-// 				checker();
-// 	  });
-// 	  addEventListener("keyup", function(event) {
-// 	    if (event.keyCode == 87)
-// 	      mouseUp("red");
-// 	  });
-// 		addEventListener("keydown", function(event) {
-// 		    if (event.keyCode == 65) //a
-// 		      mouseDownUser("yellow");
-// 					checker();
-// 		  });
-// 		  addEventListener("keyup", function(event) {
-// 		    if (event.keyCode == 65)
-// 		      mouseUp("yellow");
-// 		  });
-// 			addEventListener("keydown", function(event) {
-// 					if (event.keyCode == 83) //s
-// 						mouseDownUser("blue");
-// 						checker();
-// 				});
-// 				addEventListener("keyup", function(event) {
-// 					if (event.keyCode == 83)
-// 						mouseUp("blue");
-// 				});

@@ -29,7 +29,7 @@ background: gray;
 }
 
 .cir.blue {
-    background: #00A6FF;
+    background: blue;
     clip: rect(200px,400px, 400px, 200px);
     width: 400px;
 }
