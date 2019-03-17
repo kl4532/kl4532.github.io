@@ -46,7 +46,7 @@ function show_way(){
 }
 
 function mouseDown(id, user) {
-var audio = document.getElementById("a"+id);
+	var audio = document.getElementById("a"+id);
 	document.getElementById(id).style.background = id;
 	document.getElementById(id).style.opacity = 0.4;
 	audio.play("a"+id);
