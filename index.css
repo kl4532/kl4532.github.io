@@ -27,6 +27,7 @@ p{
 }
 .my-img{
   width: 200px;
+
 }
 .prj-img{
   height: auto;
@@ -251,6 +252,11 @@ p{
      margin: 0;
    }
  }
+ @-moz-document url-prefix() {
+  p{
+    font-size: 20px;
+  }
+}
  .to-top{
    background: white;
    height: 50px;
