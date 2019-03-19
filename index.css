@@ -88,6 +88,13 @@ p{
   height: auto;
   /* background: olive; */
 }
+.projects .list {
+  display: table;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:justify;
+  max-width: 500px;
+}
 .about {
   height: auto;
   text-align: justify;
