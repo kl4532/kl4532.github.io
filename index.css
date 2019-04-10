@@ -97,7 +97,7 @@ p{
 }
 .about {
   height: auto;
-  text-align: justify;
+  text-align: center;
   /* background: green; */
 }
 .contact {
@@ -148,7 +148,6 @@ p{
 .fcc-bck:hover{
   background: white;
 }
-
 /*social icons */
 
 .social:hover {
