@@ -165,7 +165,12 @@ p{
      -moz-transition-duration: 0.5s;
      -o-transition-duration: 0.5s;
  }
-
+ .own-proj{
+   width: 300px;
+   height: 70px;
+   margin 0;
+   text-align: center;
+ }
 /*
     Multicoloured Hover Variations
 */
@@ -219,6 +224,12 @@ p{
    .fcc-bck{
      margin: 0;
    }
+   .own-proj{
+     width: 300px;
+     height: 100px;
+     margin 0;
+     text-align: center;
+   }
  }
  @media only screen and (max-width: 450px){
    h1{
@@ -256,6 +267,12 @@ p{
    }
    .fcc-bck{
      margin: 0;
+   }
+   .own-proj{
+     width: 300px;
+     height: 100px;
+     margin 0;
+     text-align: center;
    }
  }
  @-moz-document url-prefix() {
