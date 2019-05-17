@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Clean sky</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- User input-->
+    <div class="usr-box w-50 mx-auto">
+        <form class="form-group mx-auto" onsubmit="validate(); return false;" autocomplete="on" method="GET">
+          <input class="form-control text-center" onkeyup='saveValue(this);' id ="country" type="text" name="country" placeholder="Country">
+          <label for="country" id="countryLab" class="val-msg">Country</label>
+          <select class="form-control custom-select" onclick='saveValue(this);' id="parameter" name="parameter">
+            <option value="">Parameter</option>
+            <option value="pm25">pm25</option>
+            <option value="pm10">pm10</option>
+            <option value="no2">NO2</option>
+            <option value="so2">SO2</option>
+            <option value="o3">Ozone</option>
+            <option value="co">Carbon monoxide</option>
+            <option value="bc">Black carbon</option>
+          </select>
+          <label for="parameter" id="parameterLab" class="val-msg">Pollution parameter</label>
+          <button class="form-group btn btn-success w-100" id ="submit" type="submit" value="Submit">Search</button>
+        </form>
+    </div>
+    <!-- Clean localStorage for testing(hidden) -->
+    <button style="display: none ;"onclick="localStorage.clear();"type="button" name="button">Clean LS</button>
+
+    <!-- Program output -->
+
+    <div id="render">
+      <!--Render results from API in accordion format-->
+    </div>
+
+    
+    <!-- Links -->
+    <script src="index.js" charset="utf-8"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
