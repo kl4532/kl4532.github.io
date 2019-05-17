@@ -339,7 +339,14 @@ function multiply_array(arr, n){
   return new_arr;
 }
 function check_value(){
-  alert(`Card dealed: ${card_num}/${shuffled.length}\nValue: ${value}\nYou are playing with ${num_of_decks} decks`);
+  alert(`General winning strategy: the player can increase the
+     starting bet if there are many aces and tens left in the deck(value is heigh)
+      in the hope of hitting a blackjack.
+      Card counting is most rewarding near
+      the end of a complete shoe when as few as possible cards remain. 
+    Card dealed: ${card_num}/${shuffled.length}\n
+    Value: ${value}\n
+    You are playing with ${num_of_decks} decks`);
 }//https://wizardofodds.com/games/blackjack/basics/
 function cardNumericalValue(card){
   if(card=="J"||card=="Q"||card=="K"){
