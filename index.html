@@ -3,124 +3,147 @@
   <head>
     <meta name="referrer" content="origin">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport" />
+    <script src="https://kit.fontawesome.com/816461554c.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Korneliusz Łukasiak</title>
   </head>
-  <body data-spy="scroll" data-target="#navbar" data-offset="30">
-    <!-- Navigation bar -->
-    <nav id="navbar" class="navbar navbar-expand my-color fixed-top ">
-      <div class="navbar-collapse  justify-content-center">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
+  <body>
+    <div class="wrapper">
+      <!-- Navigation bar -->
+      <nav class = "main-nav" id="nav">
+        <ul>
+          <a href="#home"><li> Home</li></a>
+          <a href="#projects"><li>Projects</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#contact"><li>Contact</li></a>
         </ul>
-      </div>
-      <div class="navbar navbar-expand my-color fixed-right">
-        <a class="nav-link" href="./index_pl.html"><img src="./images/pl-flag.png" alt="" class="nav-item flag"></a>
-      </div>
-    </nav>
-    <div class="home" id="home">
-      <h1>Korneliusz Łukasiak</h1>
-      <h5> The web-developer you can afford</h5>
-      <div class="border-top my-5 line"></div>
-      <img src="./images/me.png" alt="" class="my-img img-thumbnail">
-      <p><br>Welcome to my portfolio! <br><br> I am new born junior web developer with some Frontend experience.
-        However, recently I have tried Backend stuff and now it turns me on more. <br> </p>
-    </div>
-    <!-- Projects -->
-    <div class="projects" id="projects">
-      <h2>Projects</h2>
-      <div class="border-top my-5 line"></div>
-      <h3>Feel free to browse my projects!</h3><br>
-      <p style="">Below you find as follows:</p>
+        <a class="nav-link" href="./index_pl.html"><img src="./images/pl-flag.png" alt="" id="flag"></a>
+      </nav>
+
+      <!--Home  -->
+
+      <section  id="home">
+        <div class="box">
+          <h1 class="content-title">Korneliusz Łukasiak</h1>
+          <h3> Web-developer you can afford</h3>
+          <img src="./images/cropped.png" alt="">
+            <h4>Welcome on my portfolio page!</h4>
+            <p> I am new born junior web developer with some Frontend skills.
+             Recently, I have also gained a bit experience in Backend. In future I want to become a real fullstack wizard.
+            But for that I need some commercial experience, and that's what I am looking for!</p>
+        </div>
+        <hr class="line">
+      </section>
+
+      <!-- Projects -->
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <h3>Feel free to browse my projects!</h3>
+        <p>Below you find as follows:</p>
         <div class="list">
           <ul>
-            <li> backend simple blog project, built with Node.js</li>
-            <li> projects I have made during my fcc course</li>
-            <li> my own three Frontend projects: black-jack game, written with vanilla js, product webpage and program written during recruitment, using API</li>
+            <li><i class="fas fa-arrow-right"></i> backend simple blog project, built with Node.js</li>
+            <li><i class="fas fa-arrow-right"></i> projects I have made during my fcc course</li>
+            <li><i class="fas fa-arrow-right"></i> my own three Frontend projects: black-jack game, written with vanilla js, product webpage and program written during recruitment, using API</li>
           </ul>
         </div>
-        <p>Links to source code on github, can be found after clicking on particular project. Source code of blog is here -
-           <a style="color: black;" href="https://github.com/kl4532/blog-admin">link</a></p>
-      <div class="container justify-content-sm-center">
-        <a target="_blank" href="http://fresh-corn.eu/"><img title="Blog" class="prj-img item" src="./images/blog.png" alt="blog-img"></a>
-        <div class="item">
-          <a target="_blank" href="./fcc/front/front.html"><img title="Free-code-camp Front-end projects" class="prj-img fcc-fr" src="./images/fcc-fr.png" alt="blog-img"></a>
-          <a target="_blank" href="./fcc/back/back.html"><img title="Free-code-camp Back-end projects" class="prj-img fcc-bck" src="./images/fcc-bck.png" alt="blog-img"></a>
-        </div>
-        <div class="item">
-          <a target="_blank" href="./bj/blackjack.html"><img title="Black-jack" class="prj-img own-proj" src="./images/bj.png" alt="bj"></a>
-          <a target="_blank" href="./mama-page/index.html"><img title="Advert page" class="prj-img own-proj" src="./images/mama.png" alt="mama"></a>
-          <a target="_blank" href="./cleanSky/index.html"><img title="Clean sky" class="prj-img own-proj" src="./images/cleanSky.png" alt="cleanSky"></a>
-        </div>
-        <!-- <a target="_blank" href="./bj/blackjack.html"><img title="Black-jack" class="prj-img item" src="./images/bj.png" alt="blackjack"></a> -->
-      </div>
-    </div>
-
-    <div class="about" id="about">
-      <h2>About</h2>
-      <div class="border-top my-5 line"></div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/jdJCPxL0n8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <p>I am self-taugh programist, graduated in a field connected with industry and enviromental protection.
-        Nevertheless I was always close to computers. First time I have tried programing it was for purpose -
-        I have created small windows forms app calculating exhaust composition from combustion. Sounds scary,
-        but formulas for it were pretty easy. Whole computing process was time consuming, hence I made that calculator.
-        And I realy liked it.
-      </p>
-      <p>I have decided to dive into programming, because solving problems gives me satisfaction. Of course,
-        sometimes I need to struggle, sometimes I get stuck, sometimes there are even tears and pain... more or less.
-        But how they say - no pain, no gain. And in the end of the day - I am proud of my hard work.
-      </p>
-      <p>In web development i prefer practical approach. I am more interested in logic behind the program than it's design.
-        I like simplicity - more complicated solution -> more bugs.
-      </p>
-      <p>Why I chose this branch? I want to improve myself, build my knowledgebase day after day, keep my
-      mind busy and never stop learning because there is always room for improvement. And if you stop, you're moving back.</p>
-      <div class="">
-            <div class="text-center center-block">
-                <a href="https://github.com/kl4532"><i title="My github" id="social-gh" class="fa fa-github-square fa-5x social"></i></a>
-                <a href="https://www.freecodecamp.org/cornybig"><i title="Free-code-camp portfolio" id="social-fcc" class="fa fa-free-code-camp fa-5x social"></i></a>
-                <a href="https://pl.linkedin.com/in/korneliusz-%C5%82ukasiak-943a1817a"><i title="Linked-in profile" id="social-li" class="fa fa-linkedin fa-5x social"></i></a>
-                <a href="https://www.facebook.com/people/Korneliusz-%C5%81ukasiak/100004039914198"><i title="My facebook" id="social-fb" class="fa fa-facebook-square fa-5x social"></i></a>
+        <p class="text-small">Links to source code on github, can be found after clicking on particular project. Source code of blog is here -
+        <a target="_blank" style="color: #ccc;"href="https://github.com/kl4532/blog-admin">LINK</a></p>
+        <div class="box">
+          <div class="container">
+            <a target="_blank" href="http://fresh-corn.eu/"><img title="Blog" class="child" src="./images/blog.png" alt="blog-img"></a>
+          </div>
+          <div class="container">
+            <div class="">
+              <a target="_blank" href="./fcc/front/front.html"><img title="Free-code-camp Front-end projects" class="" src="./images/fcc-fr.png" alt="blog-img"></a>
             </div>
+            <div class="">
+              <a target="_blank" href="./fcc/back/back.html"><img title="Free-code-camp Back-end projects" class="" src="./images/fcc-bck.png" alt="blog-img"></a>
+            </div>
+          </div>
+          <div class="container box-own">
+            <div class="item1">
+              <a target="_blank" href="./cleanSky/index.html"><img title="Clean sky" class="" src="./images/cleanSky.png" alt="cleanSky"></a>
+            </div>
+            <div class="item2">
+              <a target="_blank" href="./mama-page/index.html"><img title="Advert page" class="" src="./images/mama.png" alt="mama"></a>
+            </div>
+            <div class="item3">
+              <a target="_blank" href="./bj/blackjack.html"><img title="Black-jack" class="" src="./images/bj.png" alt="bj"></a>
+            </div>
+
+          </div>
+        </div>
+        <hr class="line">
+      </section>
+      <!-- About -->
+
+      <section id="about">
+        <div class="box">
+          <h2>About</h2>
+          <iframe src="https://www.youtube.com/embed/jdJCPxL0n8g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>I am self-taugh programist, graduated in a field connected with industry and enviromental protection.
+            Nevertheless I was always close to computers. First time I have tried programing it was for purpose -
+            I have created small windows forms app calculating exhaust composition from combustion. Sounds scary,
+            but formulas for it were pretty easy. Whole computing process was time consuming, hence I made that calculator.
+            And I realy liked it.
+          </p>
+          <p>I have decided to dive into programming, because solving problems gives me satisfaction. Of course,
+            sometimes I need to struggle, sometimes I get stuck, sometimes there are even tears and pain... more or less.
+            But how they say - no pain, no gain. And in the end of the day - I am proud of my hard work.
+          </p>
+          <p>In web development i prefer practical approach. I am more interested in logic behind the program than it's design.
+            I like simplicity - more complicated solution -> more bugs.
+          </p>
+          <p>Why I chose this branch? I want to improve myself, build my knowledgebase day after day, keep my
+          mind busy and never stop learning because there is always room for improvement. And if you stop, you're moving back.</p>
+          <div class="box box-social">
+                  <div class="child">
+                    <a href="https://github.com/kl4532"><i title="My github" id="social-gh" class="fab fa-github fa-5x"></i></a>
+
+                  </div>
+                  <div class="child">
+                    <a href="https://www.freecodecamp.org/cornybig"><i title="Free-code-camp portfolio" id="social-fcc" class="fab fa-free-code-camp fa-5x social"></i></a>
+
+                  </div>
+                  <div class="child">
+                    <a href="https://pl.linkedin.com/in/korneliusz-%C5%82ukasiak-943a1817a"><i title="Linked-in profile" id="social-li" class="fab fa-linkedin fa-5x social"></i></a>
+
+                  </div>
+                  <div class="child">
+                    <a href="https://www.facebook.com/people/Korneliusz-%C5%81ukasiak/100004039914198"><i title="My facebook" id="social-fb" class="fab fa-facebook-square fa-5x social"></i></a>
+                  </div>
+          </div>
+        </div>
+        <hr class="line">
+      </section>
+
+      <!-- Contact -->
+
+      <section id="contact">
+        <div class="box">
+          <h2>Contact</h2>
+          <p>Want to work with me? <br>Call me, write me or fill the form</p>
+          <p>tel. +48 692-800-113</p> <p> email: kornellukasiak@gmail.com</p>
+          <form class="contact-form" action="https://formspree.io/kornellukasiak@gmail.com" method="POST">
+            <div class="child">
+              <input name="_replyto" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="child">
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="child">
+              <textarea name="message" type="text" class="form-control"  placeholder="Message"></textarea>
+            </div>
+            <button type="submit" class="btn-sub">Submit</button>
+          </form>
+          <a href="#nav"><button class="btn-top" title="To the top">&#8648;</button></a>
       </div>
-    </div>
-    <div class="contact" id="contact">
-      <h2>Contact</h2>
-      <div class="border-top my-5 line"></div>
-      <h5>Want to work with me? <br>Call me, write me or fill the form</h5>
-      <p style="text-align: center;">tel. +48 692-800-113<br> email: kornellukasiak@gmail.com</p>
-      <br>
-        <form class="contact-form" action="https://formspree.io/kornellukasiak@gmail.com" method="POST">
-          <div class="form-group">
-            <input name="_replyto" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
-          </div>
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name">
-          </div>
-          <div class="form-group">
-            <textarea name="message" type="text" class="form-control"  placeholder="Message"></textarea>
-          </div>
-          <button type="submit" class="btn btn-success btn-block">Submit</button>
-        </form>
-        <br>
-        <a href="#home"><button class="to-top">&#8648;</button></a>
-    </div>
+
+      </section>
     <footer class="footer">Created   by Corny &copy; 2019</footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+    </body>
 </html>
