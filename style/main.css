@@ -3,8 +3,8 @@ html, body {
 }
 
 body {
-  background: #234b7b;
-  color: white;
+  background-color: #234b7b;
+  color: #fff;
   text-align: center;
   margin: 0;
   font: 1.1em/1.5 Arial, Helvetica, sans-serif;
@@ -25,12 +25,13 @@ body {
 .line {
   width: 80%;
   margin: auto;
-  color: white;
+  color: #fff;
   margin-top: 30px;
 }
 
 section {
   width: 80%;
+  padding-top: 80px;
   margin: auto;
   padding-bottom: 1rem;
 }
@@ -50,6 +51,15 @@ p {
 }
 
 /*Navigation  */
+@media (min-width: 560px) {
+  nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+  }
+}
+
 .main-nav ul {
   display: block;
   padding: 0;
@@ -59,7 +69,7 @@ p {
 
 .main-nav ul a {
   text-decoration: none;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   font-size: 1.1rem;
 }
@@ -67,24 +77,29 @@ p {
 .main-nav ul a li {
   background: #4e6e95;
   padding: 0.8rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #fff;
   text-align: center;
 }
 
 .main-nav ul a li:hover {
-  background: #345986;
+  background: #00a2ff;
 }
 
 .main-nav ul a:hover {
   font-weight: bold;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 560px) {
   .main-nav ul {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+  .main-nav #flag {
+    position: absolute;
+    top: 80px;
+    right: 10px;
   }
 }
 
@@ -102,13 +117,12 @@ p {
   margin: auto;
   border-radius: 10px;
   background-color: #fff;
-  border: 2px solid #dee2e6;
+  border: 2px solid #d1dad8;
 }
 
 @media (min-width: 900px) {
   #home {
     width: 60%;
-    font-size: 0.8em;
   }
   #home h4 {
     text-align: left;
@@ -136,10 +150,6 @@ p {
   max-width: 60ch;
 }
 
-#projects .text-small {
-  font-size: 0.9rem;
-}
-
 #projects img {
   max-width: 100%;
   max-height: auto;
@@ -161,7 +171,14 @@ p {
   position: relative;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 900px) {
+  #projects p {
+    text-align: center;
+    font-size: 0.9em;
+  }
+}
+
+@media (min-width: 560px) {
   #projects .container {
     width: 100%;
     margin: auto;
@@ -198,7 +215,7 @@ p {
 #about iframe {
   width: 100%;
   height: 150px;
-  border: 5px solid #ddd;
+  border: 5px solid #d1dad8;
 }
 
 #about #social-gh {
@@ -206,7 +223,7 @@ p {
 }
 
 #about #social-fcc {
-  color: green;
+  color: #006400;
 }
 
 #about #social-fb {
@@ -221,7 +238,7 @@ p {
 #about #social-gh:hover,
 #about #social-fcc:hover,
 #about #social-li:hover {
-  color: white;
+  color: #fff;
 }
 
 #about .box-social {
@@ -240,7 +257,7 @@ p {
   }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 560px) {
   #about iframe {
     max-width: 500px;
     height: 200px;
@@ -296,12 +313,12 @@ p {
   width: 100%;
   height: 40px;
   border: none;
-  background: #5cb85c;
+  background: #3faf3f;
   color: #fff;
 }
 
 #contact .btn-sub:hover {
-  background: #52a552;
+  background: #5dc55d;
 }
 
 #contact .btn-top {
@@ -309,17 +326,17 @@ p {
   height: 40px;
   width: 40px;
   font-size: 20px;
-  border: white;
+  border: #fff;
   border-radius: 10%;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  color: black;
+  color: #000;
   margin: 10px 0;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 560px) {
   #contact form {
     width: 65%;
     margin: auto;

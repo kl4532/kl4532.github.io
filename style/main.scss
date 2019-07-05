@@ -5,18 +5,43 @@
     }
 }
 @mixin desktop-sm {
-    @media (min-width: 540px) {
+    @media (min-width: 560px) {
         @content;
     }
 }
+
+// Colors
+
+$colors: (
+    bg: #234b7b,
+    nav: #4e6e95,
+    nav-select: rgb(0, 162, 255),
+    border: #d1dad8,
+
+    sc-gh: #333,
+    sc-fcc: #006400,
+    sc-fb: #3B5998,
+    sc-li: #4875B4,
+
+    btn-primary: #3faf3f,
+    btn-primary-hov: lighten(#3faf3f, 10%),
+    footer: #4e6e95
+);
+
+@function color($color-name) {
+    @return map-get($colors, $color-name)
+}
+
+$padding: 15px;
+$borders: 15px;
 
 html, body{
     height: 100%;
 }
 
 body{
-    background: #234b7b;
-    color: white;
+    background-color: color(bg);
+    color: #fff;
     text-align:center;
     margin: 0;
     font: 1.1em/1.5 Arial, Helvetica, sans-serif;
@@ -36,12 +61,13 @@ body{
 .line{
     width: 80%;
     margin: auto;
-    color: white;
+    color: #fff;
     margin-top: 30px;
 }
 
 section {
 width: 80%;
+padding-top: 80px;
 margin: auto;
 padding-bottom: 1rem;
 }
@@ -61,6 +87,15 @@ padding: 10px 0;
 
 
 /*Navigation  */
+@include desktop-sm{
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 10;
+        
+    }
+}
 .main-nav {
     ul{
         display: block;
@@ -69,17 +104,17 @@ padding: 10px 0;
         list-style: none;
         a{
             text-decoration: none;
-            color: white;
+            color: #fff;
             text-transform: uppercase;
             font-size: 1.1rem;
             li{
-                background: #4e6e95;
+                background: color(nav);
                 padding: 0.8rem;
-                border-bottom: 1px solid #ddd;
+                border-bottom: 1px solid #fff;
                 text-align: center;
             }
             li:hover {
-                background: #345986;
+                background: color(nav-select);
             }
         }
         a:hover {
@@ -90,6 +125,12 @@ padding: 10px 0;
         ul{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
+        }
+        #flag {
+         position: absolute;
+         top: 80px;   
+         right: 10px;
+            
         }
     }
     #flag {
@@ -109,13 +150,12 @@ padding: 10px 0;
         margin: auto;
         border-radius: 10px;
         background-color: #fff;
-        border: 2px solid #dee2e6;
+        border: 2px solid color(border);
     }
 }
 @include desktop-lg {
     #home {
         width: 60%;
-        font-size: 0.8em;
         h4 {
             text-align: left;
         }
@@ -143,9 +183,6 @@ padding: 10px 0;
         margin: auto;
         max-width: 60ch;
     }
-    .text-small {
-        font-size: 0.9rem;
-    }
     img{
         max-width: 100%;
         max-height: auto;
@@ -160,6 +197,12 @@ padding: 10px 0;
         /*Selected on top  */
         z-index: 2;
         position:relative;
+    }
+    @include desktop-lg{
+        p{
+            text-align: center;
+            font-size: 0.9em;
+        }
     }
         
 }
@@ -196,26 +239,26 @@ padding: 10px 0;
     iframe {
         width: 100%;
         height: 150px;
-        border: 5px solid #ddd;
+        border: 5px solid color(border);
     }
     #social-gh{
-        color: #333;
+        color: color(sc-gh);
     }
     #social-fcc{
-    color: green;
+        color: color(sc-fcc);
     }
     #social-fb{
-    color: #3B5998
+        color: color(sc-fb);
     }
     #social-li{
-    color: #4875B4;
+        color: color(sc-li);
     }
     
     #social-fb:hover,
     #social-gh:hover,
     #social-fcc:hover,
     #social-li:hover {
-        color: white;
+        color: #fff;
     }
     .box-social{
         width: 80%;
@@ -274,21 +317,21 @@ padding: 10px 0;
         width: 100%;
         height: 40px;
         border: none;
-        background: #5cb85c;
+        background: color(btn-primary);
         color: #fff;
     }
     .btn-sub:hover {
-        background: #52a552;
+        background: color(btn-primary-hov);
     }
     .btn-top{
         background: white;
         height: 40px;
         width: 40px;
         font-size: 20px;
-        border: white;
+        border: #fff;
         border-radius: 10%;
         user-select: none;
-        color: black;
+        color: #000;
         margin: 10px 0;
     }
 }
@@ -307,6 +350,6 @@ padding: 10px 0;
 /*Footer  */
 
 footer{
-    background: #4e6e95;
+    background: color(footer);
     font-size: 0.5em;
 }
