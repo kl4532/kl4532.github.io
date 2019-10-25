@@ -152,13 +152,12 @@ p {
 
 #projects img {
   max-width: 100%;
-  max-height: auto;
   border-radius: 20px;
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  z-index: 1;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: relative;
 }
 
 #projects img:hover {
@@ -167,8 +166,8 @@ p {
   -webkit-transition-duration: 0.7s;
           transition-duration: 0.7s;
   /*Selected on top  */
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
 
 @media (min-width: 900px) {
