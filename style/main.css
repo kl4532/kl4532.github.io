@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 html, body {
   height: 100%;
 }
@@ -7,15 +8,18 @@ body {
   color: #fff;
   text-align: center;
   margin: 0;
-  font: 1.1em/1.5 Arial, Helvetica, sans-serif;
+  font: 1.1em/1.5 Lato, Helvetica, sans-serif;
+}
+
+a {
+  color: yellow;
 }
 
 @media (min-width: 900px) {
   body {
-    font: 1.3em/1.5 Arial, Helvetica, sans-serif;
+    font: 1.3em/1.5 Lato, Helvetica, sans-serif;
   }
 }
-
 .wrapper {
   text-align: center;
   width: 100%;
@@ -31,7 +35,6 @@ body {
 
 section {
   width: 80%;
-  padding-top: 80px;
   margin: auto;
   padding-bottom: 1rem;
 }
@@ -49,7 +52,6 @@ p {
     width: 100%;
   }
 }
-
 /*Navigation  */
 @media (min-width: 560px) {
   nav {
@@ -59,42 +61,34 @@ p {
     z-index: 10;
   }
 }
-
 .main-nav ul {
   display: block;
   padding: 0;
   margin-top: 0;
   list-style: none;
 }
-
 .main-nav ul a {
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   font-size: 1.1rem;
 }
-
 .main-nav ul a li {
   background: #4e6e95;
   padding: 0.8rem;
   border-bottom: 1px solid #fff;
   text-align: center;
 }
-
 .main-nav ul a li:hover {
   background: #00a2ff;
 }
-
 .main-nav ul a:hover {
   font-weight: bold;
 }
-
 @media (min-width: 560px) {
   .main-nav ul {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   .main-nav #flag {
     position: absolute;
@@ -102,7 +96,6 @@ p {
     right: 10px;
   }
 }
-
 .main-nav #flag {
   width: 2em;
   margin: auto;
@@ -110,12 +103,16 @@ p {
 }
 
 /*Home */
+.intro {
+  font-size: 24px;
+}
+
 #home img {
   display: block;
   width: 40%;
   height: auto;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 50%;
   background-color: #fff;
   border: 2px solid #d1dad8;
 }
@@ -123,12 +120,17 @@ p {
 @media (min-width: 900px) {
   #home {
     width: 60%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #home h4 {
     text-align: left;
   }
   #home .box {
     overflow: auto;
+    align-items: center;
   }
   #home h1 {
     font-size: 2.5em;
@@ -141,7 +143,6 @@ p {
     margin: 0 10px 10px 0;
   }
 }
-
 /*Projects  */
 #projects li {
   list-style-type: none;
@@ -149,27 +150,20 @@ p {
   margin: auto;
   max-width: 60ch;
 }
-
 #projects img {
   max-width: 100%;
   border-radius: 20px;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transform: scale(0.9);
+  transition-duration: 0.5s;
   position: relative;
 }
-
 #projects img:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-transition-duration: 0.7s;
-          transition-duration: 0.7s;
+  transform: scale(1.3);
+  transition-duration: 0.7s;
   /*Selected on top  */
   position: relative;
   z-index: 2;
 }
-
 @media (min-width: 900px) {
   #projects p {
     text-align: center;
@@ -179,43 +173,25 @@ p {
 
 @media (min-width: 560px) {
   #projects .box {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   #projects .container {
     width: 100%;
     height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     margin: auto;
   }
   #projects .box-fcc {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
   }
   #projects .box-own {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   #projects .box-own .item1, #projects .box-own .item2 {
     width: 50%;
@@ -223,52 +199,45 @@ p {
   #projects .box-own .item3 {
     width: 100%;
   }
+  #projects .box-angular {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
 /*About  */
 #about p {
   text-align: justify;
 }
-
 #about iframe {
   width: 100%;
   height: 150px;
   border: 5px solid #d1dad8;
 }
-
 #about #social-gh {
   color: #333;
 }
-
 #about #social-fcc {
   color: #006400;
 }
-
 #about #social-fb {
   color: #3B5998;
 }
-
 #about #social-li {
   color: #4875B4;
 }
-
 #about #social-fb:hover,
 #about #social-gh:hover,
 #about #social-fcc:hover,
 #about #social-li:hover {
   color: #fff;
 }
-
 #about .box-social {
   width: 80%;
   margin: auto;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-row-gap: 1rem;
 }
-
 @media (min-width: 900px) {
   #about #about .box-social {
     width: 70%;
@@ -282,51 +251,34 @@ p {
   }
   #about .box-social {
     width: 80%;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     padding-top: 20px;
   }
 }
-
 /*Contact  */
 #contact .contact-form .child {
   margin-bottom: 10px;
 }
-
 #contact input, #contact textarea {
   width: 100%;
   height: 40px;
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   padding: 2px;
   border: none;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   text-align: left;
   font: 0.8em Arial, Helvetica, sans-serif;
 }
-
 #contact textarea {
   height: 100px;
 }
-
-#contact input::-webkit-input-placeholder, #contact textarea::-webkit-input-placeholder {
-  text-align: center;
-}
-
-#contact input:-ms-input-placeholder, #contact textarea:-ms-input-placeholder {
-  text-align: center;
-}
-
-#contact input::-ms-input-placeholder, #contact textarea::-ms-input-placeholder {
-  text-align: center;
-}
-
 #contact input::placeholder, #contact textarea::placeholder {
   text-align: center;
 }
-
 #contact .btn-sub {
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   font-size: 0.8em;
   width: 100%;
   height: 40px;
@@ -334,11 +286,9 @@ p {
   background: #3faf3f;
   color: #fff;
 }
-
 #contact .btn-sub:hover {
   background: #5dc55d;
 }
-
 #contact .btn-top {
   background: white;
   height: 40px;
@@ -346,10 +296,7 @@ p {
   font-size: 20px;
   border: #fff;
   border-radius: 10%;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
   color: #000;
   margin: 10px 0;
 }
@@ -363,10 +310,10 @@ p {
     text-align: center;
   }
 }
-
 /*Footer  */
 footer {
   background: #4e6e95;
   font-size: 0.5em;
 }
+
 /*# sourceMappingURL=main.css.map */

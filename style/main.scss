@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
 //  Media Queries
 @mixin desktop-lg {
     @media (min-width: 900px) {
@@ -44,11 +47,16 @@ body{
     color: #fff;
     text-align:center;
     margin: 0;
-    font: 1.1em/1.5 Arial, Helvetica, sans-serif;
+    font: 1.1em/1.5 Lato, Helvetica, sans-serif;
 }
+
+a {
+    color: yellow;
+}
+
 @include desktop-lg {
     body{
-        font: 1.3em/1.5 Arial, Helvetica, sans-serif;
+        font: 1.3em/1.5 Lato, Helvetica, sans-serif;
     }
 }
 
@@ -67,7 +75,6 @@ body{
 
 section {
 width: 80%;
-padding-top: 80px;
 margin: auto;
 padding-bottom: 1rem;
 }
@@ -141,6 +148,9 @@ padding: 10px 0;
 }
 
 /*Home */
+.intro {
+    font-size: 24px;
+}
 
 #home {
     img{
@@ -148,7 +158,7 @@ padding: 10px 0;
         width: 40%;
         height: auto;
         margin: auto;
-        border-radius: 10px;
+        border-radius: 50%;
         background-color: #fff;
         border: 2px solid color(border);
     }
@@ -156,11 +166,16 @@ padding: 10px 0;
 @include desktop-lg {
     #home {
         width: 60%;
+        height : 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         h4 {
             text-align: left;
         }
         .box{
             overflow: auto;
+            align-items: center;
         }
         h1 {
             font-size: 2.5em;
@@ -234,6 +249,10 @@ padding: 10px 0;
         }
         .box-own .item3 {
             width: 100%;
+        }
+        .box-angular {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
