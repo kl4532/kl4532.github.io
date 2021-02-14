@@ -267,6 +267,10 @@ p {
 #contact .contact-form .child {
   margin-bottom: 10px;
 }
+#contact .contact-form .thankyou-message {
+  font-size: 15px;
+  color: #3faf3f;
+}
 #contact input, #contact textarea {
   width: 100%;
   height: 40px;
