@@ -143,6 +143,14 @@ p {
     margin: 0 10px 10px 0;
   }
 }
+@media (min-width: 561px) {
+  #home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
 /*Projects  */
 #projects li {
   list-style-type: none;

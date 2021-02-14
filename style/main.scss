@@ -7,6 +7,11 @@
         @content;
     }
 }
+@mixin desktop-md {
+    @media (min-width: 561px) {
+        @content;
+    }
+}
 @mixin desktop-sm {
     @media (min-width: 560px) {
         @content;
@@ -189,6 +194,16 @@ padding: 10px 0;
         }
     }
 }
+
+@include desktop-md {
+    #home {
+        height : 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
 
 /*Projects  */
 #projects {
