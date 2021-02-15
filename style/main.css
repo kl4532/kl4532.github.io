@@ -157,6 +157,7 @@ p {
   text-align: center;
   margin: auto;
   max-width: 60ch;
+  display: table;
 }
 #projects img {
   max-width: 100%;
