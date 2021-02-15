@@ -178,6 +178,12 @@ p {
     font-size: 0.9em;
   }
 }
+#projects .highlight-projects {
+  outline: 3px solid yellow;
+}
+#projects .highlight-projects-description {
+  font-weight: bold;
+}
 
 @media (min-width: 560px) {
   #projects .box {

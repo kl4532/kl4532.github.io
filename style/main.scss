@@ -234,7 +234,12 @@ padding: 10px 0;
             font-size: 0.9em;
         }
     }
-        
+    .highlight-projects {
+        outline: 3px solid yellow;
+    }
+    .highlight-projects-description {
+        font-weight: bold;
+    }
 }
 @include desktop-sm {
     #projects {
