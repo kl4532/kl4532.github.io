@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <script src="https://kit.fontawesome.com/816461554c.js"></script>
     <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Korneliusz Łukasiak</title>
@@ -13,82 +14,72 @@
   <body>
     <div id="top" class="wrapper">
       <!-- Navigation bar -->
-      <nav class = "main-nav" id="nav">
+      <nav id="nav">
+        <h3 class="title" href="#home">Corny Portfolio</h3>
         <ul>
-          <a href="#home"><li> Home</li></a>
-          <a href="#projects"><li>Projects</li></a>
-          <a href="#about"><li>About</li></a>
-          <a href="#contact"><li>Contact</li></a>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <a class="nav-link" href="./index_pl.html"><img src="./images/pl-flag.png" alt="" id="flag"></a>
       </nav>
 
       <!--Home  -->
-      <section  id="home" class="center-v">
-        <div class="box">
-          <img src="./images/cropped.png" alt="">
-            <h2>Hello, my name is Korneliusz</h2>
+      <section id="home" class="home">
+          <div class="location-header">
+            <i class="fas fa-map-marker-alt"></i>
+            <h5>Klagenfurt, Austria</h5>
+          </div>
           <div>
-            <p class="intro"> I am polish Frontend Developer living and working in Klagenfurt, Austria.
+            <h4 class="intro"> I am Korneliusz Łukasiak - polish frontend developer with some backend skills. Living and working in Austria.
               One day I want to become a real fullstack wizard.
-            </p>
+            </h4>
           </div>
-
-        </div>
-
       </section>
+
       <!-- Projects -->
-
-      <section id="projects">
-        <h2>Projects</h2>
-        <h3>Check my web apps!</h3>
-        <div class="list">
-          <ul>
-<!--            <li><i class="fas fa-arrow-right"></i> (library app, TODO)></li>-->
-            <li id="prDescription-angular" class="prDescription"><i class="fas fa-arrow-right"></i> recent angular projects (StackBlitz)</li>
-            <li id="prDescription-own" class="prDescription"><i class="fas fa-arrow-right"></i> projects I am sentimental about</li>
-            <li id="prDescription-fcc" class="prDescription"><i class="fas fa-arrow-right"></i> threshold fcc course projects</li>
-          </ul>
-        </div>
-        <div class="box">
-          <div class="container box-angular">
+      <section id="projects" class="projects">
+        <h1 class="header">Projects</h1>
+        <div class="projects-container">
             <div class="container">
-              <a target="_blank" href="https://stackblitz.com/github/kl4532/corny-CE"><img title="My Components" class="child" src="./images/projects/cornyComponents.png" alt="components-img"></a>
+              <a target="_blank" href="https://stackblitz.com/github/kl4532/corny-CE"><img title="My Angular components" class="project-img" src="./images/projects/cce.png" alt="corny-CE-img"></a>
             </div>
             <div class="container">
-              <a target="_blank" href="https://stackblitz.com/github/kl4532/artOfDeclension"><img title="German declensions quiz" class="child" src="./images/projects/declensions.png" alt="declensions-img"></a>
+                <a target="_blank" href="https://stackblitz.com/github/kl4532/rbrBC"><img title="CRUD SPA with Angular" class="project-img" src="./images/projects/cook-book.png" alt="cook-book-img"></a>
             </div>
-          </div>
-
-          <div class="container box-own">
-            <div class="item1">
-              <a target="_blank" href="./cleanSky/index.html"><img title="Clean sky" class="" src="./images/cleanSky.png" alt="cleanSky"></a>
+            <div class="container">
+                <a target="_blank" href="https://stackblitz.com/github/kl4532/rbrBC"><img title="Electron and Angular app to make rally game more fun" class="project-img" src="./images/projects/rbrBC.png" alt="rbr-img"></a>
             </div>
-            <div class="item2">
-              <a target="_blank" href="./mama-page/index.html"><img title="Advert page" class="" src="./images/mama.png" alt="mama"></a>
+            <div class="container">
+                <a target="_blank" href="./bj/blackjack.html"><img title="Blackjack pure JS game" class="project-img" src="./images/bj.png" alt="bj-img"></a>
             </div>
-            <div class="item3">
-              <a target="_blank" href="./bj/blackjack.html"><img title="Black-jack" class="" src="./images/bj.png" alt="bj"></a>
-            </div>
-          </div>
-
-          <div class="container box-fcc">
-            <div class="">
-              <a target="_blank" href="./fcc/front/front.html"><img title="Free-code-camp Front-end projects" class="" src="./images/fcc-fr.png" alt="blog-img"></a>
-            </div>
-            <div class="">
-              <a target="_blank" href="./fcc/back/back.html"><img title="Free-code-camp Back-end projects" class="" src="./images/fcc-bck.png" alt="blog-img"></a>
-            </div>
-          </div>
-
         </div>
 
       </section>
       <!-- About -->
 
-      <section id="about">
-        <div class="box">
-          <h2>About</h2>
+      <section id="about" class="about">
+          <h1 class="header">About</h1>
+          <div class="social-container">
+            <img src="./images/me.png" alt="korneliusz" class="my-pic">
+            <div class="social-icons">
+                <div class="social-icon">
+                  <a href="https://github.com/kl4532"><i title="My github" id="social-gh" class="fab fa-github fa-2x"></i></a>
+                </div>
+                <div class="social-icon">
+                  <a href="https://pl.linkedin.com/in/korneliusz-%C5%82ukasiak-943a1817a"><i title="Linked-in profile" id="social-li" class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+                <div class="social-icon">
+                  <a href="https://www.facebook.com/people/Korneliusz-%C5%81ukasiak/100004039914198"><i title="My facebook" id="social-fb" class="fab fa-facebook-square fa-2x"></i></a>
+                </div>
+                <div class="social-icon">
+                    <a href="https://www.freecodecamp.org/cornybig"><i title="Free-code-camp portfolio" id="social-fcc" class="fab fa-free-code-camp fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="blue-overlay"></div>
+
+          </div>
+
+        <div class="about-text">
           <h4>My skills</h4>
           <p>I am self-taugh programist with almost two years of commercial experience. Right now I am part of
             a team developing interactive portals and applications based on Angular. One of our main task is providing
@@ -105,50 +96,39 @@
           <p>After two years in industry I can say - I learned a lot but also figured out how small is my knowledge. I want to improve myself,
             build my knowledgebase day after day, keep my mind busy and never stop learning because there is always room for improvement.
             And if you stop, you're moving back.</p>
-          <div class="box box-social">
-                  <div class="child">
-                    <a href="https://github.com/kl4532"><i title="My github" id="social-gh" class="fab fa-github fa-5x"></i></a>
-
-                  </div>
-                  <div class="child">
-                    <a href="https://www.freecodecamp.org/cornybig"><i title="Free-code-camp portfolio" id="social-fcc" class="fab fa-free-code-camp fa-5x social"></i></a>
-
-                  </div>
-                  <div class="child">
-                    <a href="https://pl.linkedin.com/in/korneliusz-%C5%82ukasiak-943a1817a"><i title="Linked-in profile" id="social-li" class="fab fa-linkedin fa-5x social"></i></a>
-
-                  </div>
-                  <div class="child">
-                    <a href="https://www.facebook.com/people/Korneliusz-%C5%81ukasiak/100004039914198"><i title="My facebook" id="social-fb" class="fab fa-facebook-square fa-5x social"></i></a>
-                  </div>
-          </div>
         </div>
       </section>
 
       <!-- Contact -->
 
-      <section id="contact">
-        <div class="box">
-          <h2>Contact</h2>
-          <p>Want to work with me? <br>Call me, write me or fill the form</p>
-          <p>tel. +48 692-800-113</p> <p> email: kornellukasiak@gmail.com</p>
+      <section id="contact" class="contact">
+
+          <h1 class="header">Contact</h1>
+
+          <div class="contact-details">
+              <p>tel. +48 692-800-113</p>
+              <a href="mailto: kornellukasiak@gmail.com"">kornellukasiak@gmail.com</a>
+          </div>
+
           <form class="contact-form" action="https://script.google.com/macros/s/AKfycbyQsHT_D31vlmwnIcoAoKuXWl60sEC8ld5X_OYJvdzSBLSErxO8v0Hg8A/exec" method="POST">
-            <div class="child">
+            <div class="form-element">
               <input required name="Sender mail" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Your email">
             </div>
-            <div class="child">
+            <div class="form-element">
               <input required type="text" class="form-control" placeholder="Your name">
             </div>
-            <div class="child">
+            <div class="form-element">
               <textarea required name="message" type="text" class="form-control"  placeholder="Your message"></textarea>
             </div>
-            <button type="submit" class="btn-sub">Submit</button>
+            <div class="form-element">
+                <button type="submit" class="btn-sub">Send</button>
+            </div>
 <!--              Thank you message-->
             <p style="display:none" class="thankyou-message">Your message was successfully sent. Thanks!</p>
           </form>
           <a id="to-top" href="#top"><button class="btn-top" title="To the top">&#8648;</button></a>
-        </div>
       </section>
+
       <footer class="footer">Created   by Corny &copy; 2021</footer>
 
       <script src="index.js"></script>

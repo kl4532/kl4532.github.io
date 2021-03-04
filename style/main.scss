@@ -1,409 +1,324 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+body, html{
+  color: #ffffff;
+  background-color: #0f0fb6;
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 
+  img {
+    max-width: 12em;
+  }
+}
 
-//  Media Queries
-@mixin desktop-lg {
-    @media (min-width: 900px) {
-        @content;
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(9, 9, 121, .3);
+  position: fixed;
+  width: 100%;
+  height: 3em;
+  z-index: 999;
+
+  .title {
+    margin-left: 0.5em;
+  }
+
+  ul {
+    display: flex;
+    padding: 0.2em 1em;
+
+    li {
+      list-style: none;
+      padding-left: 0.5em;
+      line-height: 2em;
+
+      a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 0.8em;
+        &:hover {
+          font-weight: bold;
+          text-decoration: peru solid underline;
+        }
+      }
     }
-}
-@mixin desktop-md {
-    @media (min-width: 561px) {
-        @content;
+
+    img {
+      width: 2em;
     }
-}
-@mixin desktop-sm {
-    @media (min-width: 560px) {
-        @content;
+  }
+
+  .flag {
+    width: 2em;
+    position: absolute;
+    bottom: 0;
+  }
+
+  @media (min-width: 768px) {
+    .title {
+      font-size: 2em;
     }
-}
-
-// Colors
-
-$colors: (
-    bg: #234b7b,
-    nav: #4e6e95,
-    nav-select: rgb(0, 162, 255),
-    border: #d1dad8,
-
-    sc-gh: #333,
-    sc-fcc: #006400,
-    sc-fb: #3B5998,
-    sc-li: #4875B4,
-
-    btn-primary: #3faf3f,
-    btn-primary-hov: lighten(#3faf3f, 10%),
-    footer: #4e6e95
-);
-
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-$padding: 15px;
-$borders: 15px;
-
-html, body{
-    height: 100%;
-}
-
-body{
-    background-color: color(bg);
-    color: #fff;
-    text-align:center;
-    margin: 0;
-    font: 1.1em/1.5 Lato, Helvetica, sans-serif;
-}
-
-a {
-    color: yellow;
-}
-
-@include desktop-lg {
-    body{
-        font: 1.3em/1.5 Lato, Helvetica, sans-serif;
+    ul {
+      li {
+        padding-left: 2em;
+        a {
+          font-size: 1.2em;
+        }
+      }
     }
-}
-
-.wrapper{
-    text-align: center;
-    width: 100%;
-    margin: auto;
-}
-
-.line{
-    width: 80%;
-    margin: auto;
-    color: #fff;
-    margin-top: 30px;
+  }
 }
 
 section {
-width: 80%;
-margin: auto;
-padding-bottom: 1rem;
+  margin: 0;
+  .header {
+    padding-bottom: 1em;
+    text-align: center;
+    text-decoration: peru solid underline;
+    font-size: 2.5em;
+  }
 }
 
-p{
-text-align: center;
-max-width: 70ch;
-margin: auto;
-padding: 10px 0;
-}
-@include desktop-lg {
-    p{
-        text-align: justify;
-        width: 100%;
+.home {
+  padding: 7em 3em;
+  background: rgb(9, 9, 121);
+  background: linear-gradient(177deg, rgba(9,9,121,1) 70%, rgba(9,9,121,1) 75%, rgba(2,0,36,1) 78%, rgba(0,0,0,1) 80%, rgba(0,0,4,1) 82%);
+  min-height: 100%;
+
+  .location-header {
+    display: flex;
+    margin-bottom: 0.3em;
+    .fas {
+      color: red;
+      margin-right: 0.5em;
     }
+  }
+
+  .intro {
+    font-style: italic;
+    font-weight: lighter;
+  }
+
+  @media (min-width: 768px) {
+    padding: 15em;
+    .intro {
+      font-size: 2em;
+    }
+  }
+
 }
 
+.projects {
 
-/*Navigation  */
-@include desktop-sm{
-    nav {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 10;
-        
+  background: black;
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    div {
+      padding: 1em;
     }
-}
-.main-nav {
-    ul{
-        display: block;
-        padding: 0;
-        margin-top: 0;
-        list-style: none;
-        a{
-            text-decoration: none;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 1.1rem;
-            li{
-                background: color(nav);
-                padding: 0.8rem;
-                border-bottom: 1px solid #fff;
-                text-align: center;
-            }
-            li:hover {
-                background: color(nav-select);
-            }
-        }
-        a:hover {
-            font-weight: bold;
-        }
+  }
+
+  .project-img {
+    max-width: 15em;
+    width: 15em;
+    height: 10em;
+  }
+
+  @media (min-width: 768px) {
+    .project-img {
+      max-width: 40em;
+      width: 40em;
+      height: 25em;
+      &:hover {
+        opacity: 0.4;
+      }
     }
-    @include desktop-sm {
-        ul{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-        }
-        #flag {
-         position: absolute;
-         top: 80px;   
-         right: 10px;
-            
-        }
-    }
-    #flag {
-        width: 2em;
-        margin: auto;
-        background: none;
-    }
+  }
 }
 
-/*Home */
-.intro {
-    font-size: 24px;
+.about {
+  background-color: black;
+
+  .social-container {
+    background: black;
+    display: flex;
+    position: relative;
+    flex: 2 1 auto;
+    width: 100%;
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      position: relative;
+      z-index: 3;
+      right: 0;
+      flex-basis:55%;
+
+      .social-icon {
+        padding: 0.3em 0.3em;
+        .fab:hover {
+          opacity: 0.5;
+        }
+
+        .fa-free-code-camp {
+          color: green;
+        }
+
+        .fa-github {
+          color: white;
+        }
+
+        .fa-linkedin {
+          color: #0a66c2;
+        }
+
+        .fa-facebook-square {
+          color: #1877f2;
+        }
+      }
+    }
+
+    img.my-pic {
+      min-width: 14em;
+      flex-basis:45%;
+    }
+
+    .blue-overlay {
+      min-height: 100%;
+      background: rgb(9,9,121);
+      background: linear-gradient(4deg, rgba(9,9,121,1) 16%, rgba(9,9,121,1) 23%, rgba(2,0,36,0) 26%);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      box-sizing: border-box;
+    }
+
+    @media (min-width: 768px) {
+      .fa-2x {
+        font-size: 5em;
+      }
+
+      img.my-pic {
+        min-width: 17em;
+        flex-basis:45%;
+      }
+
+      .social-icons {
+        .social-icon {
+          padding: 1.2em 1.2em;
+        }
+      }
+    }
+  }
+
+  .about-text {
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 3%, rgba(2,0,36,1) 4%, rgba(9,9,121,1) 5%);
+    padding: 0 2em 4em 2em;
+    line-height: 1.5em;
+    a {
+      color: #3faf3f;
+    }
+
+    h4 {
+      text-align: center;
+      margin-bottom: 0.2em;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0em 12em 2em 12em;
+      line-height: 2em;
+    }
+  }
 }
 
-#home {
-    img{
-        display: block;
-        width: 40%;
-        height: auto;
-        margin: auto;
-        border-radius: 50%;
-        background-color: #fff;
-        border: 2px solid color(border);
-    }
-}
-@include desktop-lg {
-    #home {
-        width: 60%;
-        height : 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        h4 {
-            text-align: left;
-        }
-        .box{
-            overflow: auto;
-            align-items: center;
-        }
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        img{
-            width: 35%;
-            max-width: 300px;
-            float:left;
-            margin: 0 10px 10px 0;
-        }
-    }
-}
+.contact {
+  background: rgb(0,0,0);
+  text-align: center;
 
-@include desktop-md {
-    #home {
-        height : 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
+  .contact-details {
+    margin-bottom: 1em;
+  }
 
-
-/*Projects  */
-#projects {
-    li {
-        list-style-type: none;
-        text-align: center;
-        margin: auto;
-        max-width: 60ch;
-        display: table;
-    }
-    img{
-        max-width: 100%;
-        border-radius: 20px;
-        transform: scale(0.9);
-        transition-duration: 0.5s;
-        position: relative;
-    }
-    img:hover{
-        transform: scale(1.3);
-        transition-duration: 0.7s;
-        /*Selected on top  */
-        position: relative;
-        z-index: 2;
-    }
-    
-    @include desktop-lg{
-        p{
-            text-align: center;
-            font-size: 0.9em;
-        }
-    }
-    .highlight-projects {
-        outline: 3px solid yellow;
-    }
-    .highlight-projects-description {
-        font-weight: bold;
-    }
-}
-@include desktop-sm {
-    #projects {
-        .box {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            margin: auto;
-        }
-        .box-fcc{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .box-own {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .box-own .item1, .box-own .item2 {
-            width: 50%;
-        }
-        .box-own .item3 {
-            width: 100%;
-        }
-        .box-angular {
-            display: flex;
-            flex-direction: column;
-        }
-    }
-}
-
-/*About  */
-
-#about {
-    p {
-        text-align: justify;
-    }
-    iframe {
-        width: 100%;
-        height: 150px;
-        border: 5px solid color(border);
-    }
-    #social-gh{
-        color: color(sc-gh);
-    }
-    #social-fcc{
-        color: color(sc-fcc);
-    }
-    #social-fb{
-        color: color(sc-fb);
-    }
-    #social-li{
-        color: color(sc-li);
-    }
-    
-    #social-fb:hover,
-    #social-gh:hover,
-    #social-fcc:hover,
-    #social-li:hover {
-        color: #fff;
-    }
-    .box-social{
+  .contact-form {
+    width: 100%;
+    .form-element {
+      input, textarea, button {
         width: 80%;
-        margin: auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 1rem;
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      textarea {
+        height: 15em;
+      }
     }
-    @include desktop-lg {
-        #about .box-social{
-            width: 70%;
-        }
-    }
-}
-@include desktop-sm {
-    #about {
-        iframe {
-            max-width: 500px;
-            height: 200px;
-        }
-        .box-social{
-            width: 80%;
-            grid-template-columns: repeat(4, 1fr);
-            padding-top: 20px;
-        }
-    }
-}
 
-/*Contact  */
-
-#contact {
-    .contact-form .child{
-        margin-bottom: 10px;
-    }
-    .contact-form {
-        .thankyou-message {
-            font-size: 15px;
-            color: #3faf3f;
-        }
-    }
-    input, textarea {
-        width: 100%;
-        height: 40px;
-        border-radius: .25rem;
-        padding: 2px;
-        border: none;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        text-align: left;   
-        font: 0.8em Arial, Helvetica, sans-serif;
-    }
-    textarea {
-        height: 100px;
-    }
-    input::placeholder, textarea::placeholder {
-        text-align: center;
-    }
     .btn-sub {
-        border-radius: .25rem;
-        font-size: 0.8em;
-        width: 100%;
-        height: 40px;
-        border: none;
-        background: color(btn-primary);
-        color: #fff;
+      border-radius: .25rem;
+      font-size: 0.8em;
+      width: 100%;
+      height: 40px;
+      border: none;
+      background: #009e00;
+      color: #fff;
     }
     .btn-sub:hover {
-        background: color(btn-primary-hov);
+      opacity: 0.8;
     }
-    .btn-top{
-        background: white;
-        height: 40px;
-        width: 40px;
-        font-size: 20px;
-        border: #fff;
-        border-radius: 10%;
-        user-select: none;
-        color: #000;
-        margin: 10px 0;
+
+    .thankyou-message {
+      font-size: 15px;
+      color: #3faf3f;
     }
-}
-@include desktop-sm {
-    #contact {
-        form {
-            width: 65%;
-            margin: auto;
+  }
+
+  .btn-top{
+    background: white;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    border: #fff;
+    border-radius: 10%;
+    user-select: none;
+    color: #000;
+    margin: 10px 0;
+  }
+
+
+  @media (min-width: 768px) {
+    width: 100%;
+    .contact-form {
+      text-align: center;
+      .form-element {
+        input, textarea{
+          width: 50%;
         }
-        p{
-            text-align: center;
+        textarea {
+          height: 35em;
         }
-    }  
+        button {
+          width: 30%;
+        }
+      }
+    }
+  }
 }
 
-/*Footer  */
-
-footer{
-    background: color(footer);
-    font-size: 0.5em;
+footer {
+  text-align: center;
 }
+
+
