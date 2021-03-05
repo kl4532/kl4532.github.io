@@ -1,6 +1,6 @@
 body, html {
   color: #ffffff;
-  background-color: #0f0fb6;
+  background-color: #2928CC;
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
@@ -26,7 +26,7 @@ nav {
   z-index: 999;
 }
 nav .title {
-  margin-left: 0.5em;
+  margin-left: 1em;
 }
 nav ul {
   display: flex;
@@ -49,14 +49,13 @@ nav ul li a:hover {
 nav ul img {
   width: 2em;
 }
-nav .flag {
-  width: 2em;
-  position: absolute;
-  bottom: 0;
-}
 @media (min-width: 768px) {
   nav .title {
     font-size: 2em;
+    margin-left: 2em;
+  }
+  nav ul {
+    margin-right: 3em;
   }
   nav ul li {
     padding-left: 2em;
@@ -72,15 +71,35 @@ section {
 section .header {
   padding-bottom: 1em;
   text-align: center;
-  text-decoration: peru solid underline;
-  font-size: 2.5em;
+  text-decoration: #2928CC solid underline;
+  text-underline-offset: 0.2em;
+  font-size: 2em;
+}
+section .diagonal-overlay {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  section .header {
+    font-size: 2.5em;
+  }
 }
 
 .home {
   padding: 7em 3em;
-  background: #090979;
-  background: linear-gradient(177deg, #090979 70%, #090979 75%, #020024 78%, black 80%, #000004 82%);
+  position: relative;
+  background: url("../images/corn-background.png") no-repeat 90% 110%;
+  background-size: 11em;
   min-height: 100%;
+  height: 60vh;
+}
+.home .black-overlay {
+  background: linear-gradient(356deg, black 16%, rgba(1, 0, 23, 0.95) 18%, rgba(9, 9, 121, 0) 20%);
 }
 .home .location-header {
   display: flex;
@@ -91,15 +110,19 @@ section .header {
   margin-right: 0.5em;
 }
 .home .intro {
-  font-style: italic;
+  font-size: 1.2em;
   font-weight: lighter;
+  line-height: 1.5em;
 }
 @media (min-width: 768px) {
   .home {
-    padding: 15em;
+    padding: 15em 15em 15em 10em;
+    height: 100vh;
+    background-size: 25em;
   }
   .home .intro {
     font-size: 2em;
+    line-height: 2em;
   }
 }
 
@@ -173,15 +196,8 @@ section .header {
   flex-basis: 45%;
 }
 .about .social-container .blue-overlay {
-  min-height: 100%;
-  background: #090979;
-  background: linear-gradient(4deg, #090979 16%, #090979 23%, rgba(2, 0, 36, 0) 26%);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  box-sizing: border-box;
+  background: linear-gradient(3deg, #2928CC 16%, #090979 18%, rgba(2, 0, 36, 0) 20%);
+  min-height: 35em;
 }
 @media (min-width: 768px) {
   .about .social-container .fa-2x {
@@ -197,9 +213,15 @@ section .header {
 }
 .about .about-text {
   background: black;
-  background: linear-gradient(0deg, black 3%, #020024 4%, #090979 5%);
-  padding: 0 2em 4em 2em;
+  background: linear-gradient(0deg, black 3%, #020024 4%, #2928CC 5%);
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3em;
   line-height: 1.5em;
+}
+.about .about-text div {
+  align-self: center;
+  width: 90%;
 }
 .about .about-text a {
   color: #3faf3f;
@@ -209,9 +231,23 @@ section .header {
   margin-bottom: 0.2em;
 }
 @media (min-width: 768px) {
-  .about .about-text {
-    padding: 0em 12em 2em 12em;
+  .about {
     line-height: 2em;
+  }
+  .about .about-text {
+    display: flex;
+    justify-content: center;
+  }
+  .about .about-text div {
+    align-self: center;
+    width: 70%;
+    line-height: 1.8em;
+  }
+  .about .about-text div h4 {
+    font-size: 1.3em;
+  }
+  .about .about-text div p {
+    font-size: 1.2em;
   }
 }
 
