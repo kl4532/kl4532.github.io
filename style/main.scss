@@ -31,6 +31,10 @@ nav {
 
   .title {
     margin-left: 1em;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   ul {
@@ -48,7 +52,6 @@ nav {
         font-size: 0.8em;
         &:hover {
           font-weight: bold;
-          text-decoration: peru solid underline;
         }
       }
     }
@@ -77,6 +80,7 @@ nav {
 
 section {
   margin: 0;
+  padding: 0 3em 2em 3em;
   .header {
     padding-bottom: 1em;
     text-align: center;
@@ -123,12 +127,16 @@ section {
       color: red;
       margin-right: 0.5em;
     }
+    p {
+      font-size: 1.2em;
+    }
   }
 
   .intro {
     font-size: 1.2em;
     font-weight: lighter;
     line-height: 1.5em;
+    max-width: 50ch;
   }
 
   @media (min-width: $desktop-screen-width) {
@@ -145,15 +153,11 @@ section {
 }
 
 .projects {
-
   background: black;
   .projects-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    div {
-      padding: 1em;
-    }
   }
 
   .project-img {
@@ -162,20 +166,50 @@ section {
     height: 10em;
   }
 
+  .project-img-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    max-width: 40em;
+    top: 0;
+    left: 0;
+    background: rgba(29, 106, 154, 1);
+    color: #fff;
+    visibility: hidden;
+
+    h2 {
+      margin-bottom: 0.3em;
+    }
+    p {
+      text-align: center;
+      width: 25ch;
+    }
+  }
+
+  .project-img-container {
+    position: relative;
+    margin: 1.2em;
+  }
+
+  .project-img-container:hover .project-img-desc{
+    visibility: visible;
+    opacity: 0.8;
+  }
+
   @media (min-width: $desktop-screen-width) {
-    .project-img {
+    .project-img, .project-img-desc {
       max-width: 40em;
       width: 40em;
       height: 25em;
-      &:hover {
-        opacity: 0.4;
-      }
     }
   }
 }
 
 .about {
   background-color: black;
+  padding: 0;
 
   .social-container {
     background: black;
@@ -187,12 +221,12 @@ section {
     .social-icons {
       display: flex;
       flex-wrap: wrap;
+      flex-basis: 55%;
       justify-content: center;
       align-content: center;
       position: relative;
       z-index: 3;
       right: 0;
-      flex-basis:55%;
 
       .social-icon {
         padding: 0.3em 0.3em;
@@ -230,11 +264,11 @@ section {
 
     @media (min-width: $desktop-screen-width) {
       .fa-2x {
-        font-size: 5em;
+        font-size: 7em;
       }
 
       img.my-pic {
-        min-width: 17em;
+        min-width: 20em;
         flex-basis:45%;
       }
 
@@ -251,7 +285,7 @@ section {
     background: linear-gradient(0deg, rgba(0,0,0,1) 3%, rgba(2,0,36,1) 4%, $base-background 5%);
     display: flex;
     justify-content: center;
-    padding-bottom: 3em;
+    padding-bottom: 5em;
 
     div {
       align-self: center;

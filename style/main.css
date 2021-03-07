@@ -28,6 +28,10 @@ nav {
 nav .title {
   margin-left: 1em;
 }
+nav .title a {
+  text-decoration: none;
+  color: inherit;
+}
 nav ul {
   display: flex;
   padding: 0.2em 1em;
@@ -44,7 +48,6 @@ nav ul li a {
 }
 nav ul li a:hover {
   font-weight: bold;
-  text-decoration: peru solid underline;
 }
 nav ul img {
   width: 2em;
@@ -67,6 +70,7 @@ nav ul img {
 
 section {
   margin: 0;
+  padding: 0 3em 2em 3em;
 }
 section .header {
   padding-bottom: 1em;
@@ -109,10 +113,14 @@ section .diagonal-overlay {
   color: red;
   margin-right: 0.5em;
 }
+.home .location-header p {
+  font-size: 1.2em;
+}
 .home .intro {
   font-size: 1.2em;
   font-weight: lighter;
   line-height: 1.5em;
+  max-width: 50ch;
 }
 @media (min-width: 768px) {
   .home {
@@ -134,27 +142,50 @@ section .diagonal-overlay {
   flex-wrap: wrap;
   justify-content: center;
 }
-.projects .projects-container div {
-  padding: 1em;
-}
 .projects .project-img {
   max-width: 15em;
   width: 15em;
   height: 10em;
 }
+.projects .project-img-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  max-width: 40em;
+  top: 0;
+  left: 0;
+  background: #1d6a9a;
+  color: #fff;
+  visibility: hidden;
+}
+.projects .project-img-desc h2 {
+  margin-bottom: 0.3em;
+}
+.projects .project-img-desc p {
+  text-align: center;
+  width: 25ch;
+}
+.projects .project-img-container {
+  position: relative;
+  margin: 1.2em;
+}
+.projects .project-img-container:hover .project-img-desc {
+  visibility: visible;
+  opacity: 0.8;
+}
 @media (min-width: 768px) {
-  .projects .project-img {
+  .projects .project-img, .projects .project-img-desc {
     max-width: 40em;
     width: 40em;
     height: 25em;
-  }
-  .projects .project-img:hover {
-    opacity: 0.4;
   }
 }
 
 .about {
   background-color: black;
+  padding: 0;
 }
 .about .social-container {
   background: black;
@@ -166,12 +197,12 @@ section .diagonal-overlay {
 .about .social-container .social-icons {
   display: flex;
   flex-wrap: wrap;
+  flex-basis: 55%;
   justify-content: center;
   align-content: center;
   position: relative;
   z-index: 3;
   right: 0;
-  flex-basis: 55%;
 }
 .about .social-container .social-icons .social-icon {
   padding: 0.3em 0.3em;
@@ -201,10 +232,10 @@ section .diagonal-overlay {
 }
 @media (min-width: 768px) {
   .about .social-container .fa-2x {
-    font-size: 5em;
+    font-size: 7em;
   }
   .about .social-container img.my-pic {
-    min-width: 17em;
+    min-width: 20em;
     flex-basis: 45%;
   }
   .about .social-container .social-icons .social-icon {
@@ -216,7 +247,7 @@ section .diagonal-overlay {
   background: linear-gradient(0deg, black 3%, #020024 4%, #2928CC 5%);
   display: flex;
   justify-content: center;
-  padding-bottom: 3em;
+  padding-bottom: 5em;
   line-height: 1.5em;
 }
 .about .about-text div {
