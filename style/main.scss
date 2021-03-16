@@ -160,10 +160,10 @@ section {
     justify-content: center;
   }
 
-  .project-img {
-    max-width: 15em;
-    width: 15em;
-    height: 10em;
+  .project-img, .project-img-desc {
+    max-width: 30em;
+    width: 20em;
+    height: 15em;
   }
 
   .project-img-desc {
@@ -172,19 +172,19 @@ section {
     justify-content: center;
     align-items: center;
     position: absolute;
-    max-width: 40em;
     top: 0;
     left: 0;
-    background: rgba(29, 106, 154, 1);
+    background: rgb(29, 106, 154);
     color: #fff;
     visibility: hidden;
+    text-align: center;
 
     h2 {
       margin-bottom: 0.3em;
+      font-size: 1.2em;
     }
     p {
-      text-align: center;
-      width: 25ch;
+      font-size: 1em;
     }
   }
 
@@ -195,7 +195,7 @@ section {
 
   .project-img-container:hover .project-img-desc{
     visibility: visible;
-    opacity: 0.8;
+    opacity: 0.9;
   }
 
   @media (min-width: $desktop-screen-width) {
@@ -203,6 +203,15 @@ section {
       max-width: 40em;
       width: 40em;
       height: 25em;
+    }
+    .project-img-desc {
+      h2 {
+        margin-bottom: 0.3em;
+        font-size: 2em;
+      }
+      p {
+        font-size: 1.5em;
+      }
     }
   }
 }

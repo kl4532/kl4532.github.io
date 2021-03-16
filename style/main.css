@@ -142,10 +142,10 @@ section .diagonal-overlay {
   flex-wrap: wrap;
   justify-content: center;
 }
-.projects .project-img {
-  max-width: 15em;
-  width: 15em;
-  height: 10em;
+.projects .project-img, .projects .project-img-desc {
+  max-width: 30em;
+  width: 20em;
+  height: 15em;
 }
 .projects .project-img-desc {
   display: flex;
@@ -153,19 +153,19 @@ section .diagonal-overlay {
   justify-content: center;
   align-items: center;
   position: absolute;
-  max-width: 40em;
   top: 0;
   left: 0;
   background: #1d6a9a;
   color: #fff;
   visibility: hidden;
+  text-align: center;
 }
 .projects .project-img-desc h2 {
   margin-bottom: 0.3em;
+  font-size: 1.2em;
 }
 .projects .project-img-desc p {
-  text-align: center;
-  width: 25ch;
+  font-size: 1em;
 }
 .projects .project-img-container {
   position: relative;
@@ -173,13 +173,20 @@ section .diagonal-overlay {
 }
 .projects .project-img-container:hover .project-img-desc {
   visibility: visible;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 @media (min-width: 768px) {
   .projects .project-img, .projects .project-img-desc {
     max-width: 40em;
     width: 40em;
     height: 25em;
+  }
+  .projects .project-img-desc h2 {
+    margin-bottom: 0.3em;
+    font-size: 2em;
+  }
+  .projects .project-img-desc p {
+    font-size: 1.5em;
   }
 }
 
