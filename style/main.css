@@ -262,7 +262,7 @@ section .diagonal-overlay {
   width: 90%;
 }
 .about .about-text a {
-  color: #3faf3f;
+  color: #d8ff3e;
 }
 .about .about-text h4 {
   text-align: center;
@@ -299,6 +299,7 @@ section .diagonal-overlay {
 .contact {
   background: black;
   text-align: center;
+  padding: 0 2em 2em 2em;
 }
 .contact .contact-details {
   margin-bottom: 1em;
@@ -307,7 +308,7 @@ section .diagonal-overlay {
   width: 100%;
 }
 .contact .contact-form .form-element input, .contact .contact-form .form-element textarea, .contact .contact-form .form-element button {
-  width: 80%;
+  width: 100%;
   padding: 1em;
   margin-bottom: 1em;
 }
