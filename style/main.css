@@ -266,7 +266,11 @@ section .diagonal-overlay {
 }
 .about .about-text h4 {
   text-align: center;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+}
+.about .about-text p {
+  margin-bottom: 0.5em;
 }
 @media (min-width: 768px) {
   .about {
@@ -282,10 +286,13 @@ section .diagonal-overlay {
     line-height: 1.8em;
   }
   .about .about-text div h4 {
-    font-size: 1.3em;
+    font-size: 2.5em;
+    margin-bottom: 1em;
   }
   .about .about-text div p {
-    font-size: 1.2em;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    margin-bottom: 1em;
   }
 }
 
