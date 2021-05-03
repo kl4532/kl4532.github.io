@@ -12,12 +12,9 @@ projectsDsc.forEach(projectDesc => {
         document.getElementById(id).classList.add('highlight-projects-description');
         document.querySelector(`.box-${target}`).classList.add('highlight-projects');
     });
-})
 
-projectsDsc.forEach( projectDesc =>
     projectDesc.addEventListener('mouseout', () =>{
-        projects.forEach( project => project.classList.remove('highlight-projects'))
-        document.querySelectorAll('.prDescription').forEach(el => el.classList.remove('highlight-projects-description'));
-        }
-    )
-);
+            projects.forEach( project => project.classList.remove('highlight-projects'))
+            document.querySelectorAll('.prDescription').forEach(el => el.classList.remove('highlight-projects-description'));
+    });
+})
